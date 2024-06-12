@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Fit</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--INICIO DO BANNER -->
+    <div class="banner">
+        <!-- INICIO DO CONTAINER-->
+        <div class="container">
+            <!--INICIO DA NAVEGAÇÃO TOPO-->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo.png" alt="STYLEFIT" class="img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="produtos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="empresa.html">Empresa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="minhaconta.php">Minha conta</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/img/venda-1.jpg" class="d-block w-100" style="height: 50vh; object-fit: cover;" alt="Imagem 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/venda-2.jpg" class="d-block w-100" style="height: 50vh; object-fit: cover;" alt="Imagem 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/venda-3.jpg" class="d-block w-100" style="height: 50vh; object-fit: cover;" alt="Imagem 3">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Conjunto Feminino</h2>
+                <p>O Conjunto Feminino de Top e Calça Legging é uma escolha elegante e versátil para mulheres que buscam conforto e estilo em suas atividades diárias. Com um design moderno e materiais de alta qualidade, este conjunto é perfeito para diversas ocasiões, desde treinos na academia até passeios casuais.</p>
+                <br>
+                <h2>R$ 89,90</h2>
+                <br>
+                <a href="/minhaconta.php" class="btn-login">Comprar</a>
+            </div>
+        </div>
+    </div>
+
+<br><br>
+    <!-- INICIO RODAPÉ -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="linha">
+                <div class="rodape-col-1">
+                    <h3>Baixe o nosso app</h3>
+                    <p>Baixe nosso aplicativo nas melhores plataformas.</p>
+                    <div class="app-logo">
+                        <img src="assets/img/google.png" alt="">
+                        <img src="assets/img/apple.png" alt="">
+                    </div>
+                </div>
+                <div class="rodape-col-2">
+                    <img src="assets/img/logo.png" alt="">
+                    <p>Conquiste seu melhor com estilo e performance</p>
+                </div>
+                <div class="rodape-col-3">
+                    <h3>Mais informações</h3>
+                    <ul>
+                        <li>Cupons</li>
+                        <li>Blog</li>
+                        <li>Política de privacidade</li>
+                        <li>Contatos</li>
+                    </ul>
+                </div>
+                <div class="rodape-col-4">
+                    <h3>Redes Sociais</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                        <li>Twitter</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="direitos">
+                &#169; Todos os direitos reservados
+            </p>
+        </div>
+    </footer>
+    <!-- FIM RODAPÉ -->
+
+    <script>
+        // Deixa a animação mais suave
+        $(document).ready(function(){
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
