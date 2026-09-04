@@ -19,4 +19,4 @@ Protótipo de site de e-commerce desenvolvido como projeto de faculdade, focado 
 ## ⚙️ Como Executar o Projeto
 1. Clone este repositório:
    ```bash
-   git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
+   git clona https://github.com/kaiozs/ProjetoDevWeb.git
