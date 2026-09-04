@@ -9,8 +9,8 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Style Fit</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.6/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/img/icone.png" type="image/png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/img/icone.png" type="image/png">
 </head>
 <body>
 
@@ -21,8 +21,8 @@ session_start();
             <!--INICIO DA NAVEGAÇÃO TOPO-->
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="assets/img/logo.png" alt="STYLEFIT">
+                    <a href="../../index.html">
+                        <img src="../assets/img/logo.png" alt="STYLEFIT">
                     </a>
                 </div>
 
@@ -30,7 +30,7 @@ session_start();
 
                 <nav>
                     <ul id="MenuItens">
-                        <li><a href="index.html" title="">Inicio</a></li>
+                        <li><a href="../../index.html" title="">Inicio</a></li>
                         <li><a href="produtos.html" title="">Produtos</a></li>
                         <li><a href="empresa.html" title="">Empresa</a></li>
                         <li><a href="login.html" title="">Login</a></li>
@@ -38,7 +38,7 @@ session_start();
                     </ul>
                 </nav>
                 <!-- FIM DO MENU DE NAVEGAÇÃO -->
-                <img src="assets/img/menu.png" alt="" class="menu-celular" onclick="menucelular()">
+                <img src="../assets/img/menu.png" alt="" class="menu-celular" onclick="menucelular()">
             </div>
             <!--FIM DA NAVEGAÇÃO TOPO-->
         </div>
@@ -66,12 +66,12 @@ session_start();
                     // O usuário está logado, exibe uma mensagem de boas-vindas
                     echo '<br><br>';
                     echo '<div class="alert alert-info custom-alert" role="alert">Bem-vindo, ' . $_SESSION['email'] . '!</div>';
-                    echo '<br> <a href="assets/banco/logout.php" class="btn btn-danger">Sair</a>';
+                    echo '<br> <a href="../backend/logout.php" class="btn btn-danger">Sair</a>';
                 } else {
                     // O usuário não está logado, exibe uma mensagem informando-o para fazer login
                     echo '<br><br>';
                     echo '<div class="alert alert-info custom-alert" role="alert">Por favor, faça login para continuar.</div>';
-                    echo '<br> <a href="/login.html" class="btn btn-danger">Fazer login</a>';
+                    echo '<br> <a href="login.html" class="btn btn-danger">Fazer login</a>';
                 }
                 ?>
                 
@@ -108,12 +108,12 @@ session_start();
                     <h3>Baixe o nosso app</h3>
                     <p>Baixe nosso aplicativo nas melhores plataformas.</p>
                     <div class="app-logo">
-                        <img src="assets/img/google.png" alt="">
-                        <img src="assets/img/apple.png" alt="">
+                        <img src="../assets/img/google.png" alt="">
+                        <img src="../assets/img/apple.png" alt="">
                     </div>
                 </div>
                 <div class="rodape-col-2">
-                    <img src="assets/img/logo.png" alt="">
+                    <img src="../assets/img/logo.png" alt="">
                     <p>Conquiste seu melhor com estilo e performance</p>
                 </div>
                 <div class="rodape-col-3">
@@ -146,6 +146,6 @@ session_start();
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="../assets/js/app.js"></script>
 </body>
 </html>

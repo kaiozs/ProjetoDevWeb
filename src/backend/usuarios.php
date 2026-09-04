@@ -1,7 +1,7 @@
 <?php
 try {
     // Cria uma nova conexão PDO com o banco de dados SQLite
-    $db = new PDO('sqlite:usuarios.db');
+    $db = new PDO('sqlite:' . __DIR__ . '/usuarios.db');
 
     // Define o modo de erro do PDO para exceções
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

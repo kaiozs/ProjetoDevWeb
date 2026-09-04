@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Style Fit</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/img/icone.png" type="image/png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/img/icone.png" type="image/png">
 </head>
 <body class="body">
     <!--INICIO DO BANNER -->
@@ -16,14 +16,14 @@
             <!--INICIO DA NAVEGAÇÃO TOPO-->
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="assets/img/logo.png" alt="STYLEFIT">
+                    <a href="../../index.html">
+                        <img src="../assets/img/logo.png" alt="STYLEFIT">
                     </a>
                 </div>
                 <!-- INICIO DO MENU DE NAVEGAÇÃO -->
                 <nav>
                     <ul id="MenuItens">
-                        <li><a href="index.html" title="">Inicio</a></li>
+                        <li><a href="../../index.html" title="">Inicio</a></li>
                         <li><a href="produtos.html" title="">Produtos</a></li>
                         <li><a href="empresa.html" title="">Empresa</a></li>
                         <li><a href="login.html" title="">Login</a></li>
@@ -31,7 +31,7 @@
                     </ul>
                 </nav>
                 <!-- FIM DO MENU DE NAVEGAÇÃO -->
-                <img src="assets/img/menu.png" alt="" class="menu-celular" onclick="menucelular()">
+                <img src="../assets/img/menu.png" alt="" class="menu-celular" onclick="menucelular()">
             </div>
             <!--FIM DA NAVEGAÇÃO TOPO-->
         </div>
@@ -51,7 +51,7 @@
                             <div id="formularioLogin" class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Login</h5>
-                                    <form action="assets/banco/login.php" method="POST" class="mt-3">
+                                    <form action="../backend/login.php" method="POST" class="mt-3">
                                         <div class="form-group">
                                             <label for="loginEmail">Email</label>
                                             <input type="email" class="form-control" id="loginEmail" name="email" required>
@@ -70,7 +70,7 @@
                             <div id="formularioCadastro" class="card" style="display: none;">
                                 <div class="card-body">
                                     <h5 class="card-title">Cadastro</h5>
-                                    <form action="assets/banco/cadastro.php" method="POST" class="mt-3">
+                                    <form action="../backend/cadastro.php" method="POST" class="mt-3">
                                         <div class="form-group">
                                             <label for="cadastroNome">Nome</label>
                                             <input type="text" class="form-control" id="cadastroNome" name="nome" required>
@@ -126,12 +126,12 @@
                     <h3>Baixe o nosso app</h3>
                     <p>Baixe nosso aplicativo nas melhores plataformas.</p>
                     <div class="app-logo">
-                        <img src="assets/img/google.png" alt="">
-                        <img src="assets/img/apple.png" alt="">
+                        <img src="../assets/img/google.png" alt="">
+                        <img src="../assets/img/apple.png" alt="">
                     </div>
                 </div>
                 <div class="rodape-col-2">
-                    <img src="assets/img/logo.png" alt="">
+                    <img src="../assets/img/logo.png" alt="">
                     <p>Conquiste seu melhor com estilo e performance</p>
                 </div>
                 <div class="rodape-col-3">
@@ -163,6 +163,6 @@
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="../assets/js/app.js"></script>
 </body>
 </html>

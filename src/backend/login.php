@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$db_path = '/home/runner/StyleFit-1/assets/banco/usuarios.db';
+$db_path = __DIR__ . '/usuarios.db';
 
 // Verifica se o arquivo do banco de dados existe
 if (!file_exists($db_path)) {
@@ -31,19 +31,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (password_verify($senha, $row['senha'])) {
                 // Login bem-sucedido, armazena informações na sessão e redireciona
                 $_SESSION['email'] = $row['email'];
-                header("Location: /minhaconta.php");
+                header("Location: /src/pages/minhaconta.php");
                 exit();
             } else {
                 // Senha incorreta
                 $_SESSION['error'] = "Senha incorreta.";
-                header("Location: /login.html?cadastro=senha_incorreta");
+                header("Location: /src/pages/login.html?cadastro=senha_incorreta");
                 exit();
                 exit();
             }
         } else {
             // Usuário não encontrado
             $_SESSION['error'] = "Usuário não encontrado.";
-            header("Location: /login.html?cadastro=usuario_nao_encontrado");
+            header("Location: /src/pages/login.html?cadastro=usuario_nao_encontrado");
             exit();
         }
 
@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         // Se os campos de email e senha não foram enviados, exibe uma mensagem de erro
         $_SESSION['error'] = "Por favor, preencha todos os campos.";
-        header("Location: /login.html");
+        header("Location: /src/pages/login.html");
         exit();
     }
 }

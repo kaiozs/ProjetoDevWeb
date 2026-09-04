@@ -1,6 +1,6 @@
 <?php
 try {
-    $db = new PDO('sqlite:usuarios.db');
+    $db = new PDO('sqlite:' . __DIR__ . '/usuarios.db');
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     echo 'Conexão bem-sucedida!';

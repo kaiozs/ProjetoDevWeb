@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
     try {
-        $db = new PDO('sqlite:/home/runner/StyleFit-1/assets/banco/usuarios.db');
+        $db = new PDO('sqlite:' . __DIR__ . '/usuarios.db');
 
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':senha', $senha_hash); // Insere a senha hashada
         $stmt->execute();
 
-        header("Location: /login.html?cadastro=sucesso");
+        header("Location: /src/pages/login.html?cadastro=sucesso");
         exit();
     } catch (PDOException $e) {
         echo "Erro ao cadastrar o usuário: " . $e->getMessage();
